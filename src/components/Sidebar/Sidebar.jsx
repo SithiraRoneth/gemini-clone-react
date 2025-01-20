@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import {useContext, useState} from 'react';
 import '../Sidebar/Sidebar.css'
 import {assets} from "../../assets/assets.js";
 import {Context} from "../../context/Context.jsx";
