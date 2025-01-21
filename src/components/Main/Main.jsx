@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import {useContext, useEffect} from 'react';
 import '../Main/Main.css'
 import {assets} from "../../assets/assets.js";
 import {Context} from "../../context/Context.jsx";
@@ -6,7 +6,6 @@ import {Context} from "../../context/Context.jsx";
 const Main = () => {
 
     const {onSent, recentPrompt, showResult, loading, resultData, setInput, input} = useContext(Context);
-
     return (
         <div className='main'>
             <div className="nav">
@@ -18,7 +17,7 @@ const Main = () => {
                     ?
                     <>
                         <div className="greet">
-                            <p><span>Hello, Dev</span></p>
+                            <p><span>Hello, Roneth</span></p>
                             <p>How can I help you today ?</p>
                         </div>
                         <div className="cards">
@@ -50,9 +49,12 @@ const Main = () => {
                             {loading
                                 ?
                                 <div className='loader'>
-                                    <hr/>
-                                    <hr/>
-                                    <hr/>
+                                    {/*<hr/>*/}
+                                    {/*<hr/>*/}
+                                    {/*<hr/>*/}
+                                    <span className="dot"></span>
+                                    <span className="dot"></span>
+                                    <span className="dot"></span>
                                 </div>
                                 : <p dangerouslySetInnerHTML={{__html: resultData}}></p>
                             }
